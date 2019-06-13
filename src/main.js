@@ -3,6 +3,17 @@ import App from './App.vue'
 import router from './router'
 import store from './store/store.js'
 import './styles/common/reset.less'
+import { Swipe, SwipeItem, Tab, Tabs, NavBar, IndexBar, IndexAnchor, Cell } from 'vant'
+Vue
+  .use(Swipe)
+  .use(SwipeItem)
+  .use(Tab)
+  .use(Tabs)
+  .use(NavBar)
+  .use(IndexBar)
+  .use(IndexAnchor)
+  .use(Cell)
+
 Vue.config.productionTip = false
 
 new Vue({
