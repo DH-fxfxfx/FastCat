@@ -4,6 +4,12 @@ import router from './router'
 import store from './store/store.js'
 import './styles/base.less'
 
+import { DropdownMenu, DropdownItem } from 'vant'
+
+Vue
+  .use(DropdownMenu)
+  .use(DropdownItem)
+
 Vue.config.productionTip = false
 
 new Vue({
