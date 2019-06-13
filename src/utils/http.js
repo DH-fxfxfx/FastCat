@@ -2,7 +2,7 @@ import axios from 'axios'
 import { Toast } from 'vant'
 const http = axios.create()
 
-http.defaults.baseURL = process.env.NODE_ENV === 'production' ? 'https://m.maizuo.com/' : 'https://m.maizuo.com/'
+http.defaults.baseURL = process.env.NODE_ENV === 'production' ? 'https://m.maoyan.com/' : 'https://.maoyan.com/'
 http.defaults.timeout = 10000
 
 http.interceptors.response.use(response => {
