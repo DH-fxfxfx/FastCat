@@ -1,7 +1,7 @@
 //影片列表组件
 <template>
   <ul class="film-list">
-                 <li class="film-item"c
+                 <li class="film-item"
                  v-for="film in list"
                  :key="film.id">
                      <img class="film-img" :src="film.img" alt="">
@@ -37,6 +37,10 @@ export default {
     list: {
       type: Array
 
+    },
+
+    list2 : {
+      Array
     }
   },
 

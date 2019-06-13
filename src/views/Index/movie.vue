@@ -8,6 +8,7 @@
         <van-tab disabled=""></van-tab>
           <van-tab title="正在热映" class="film" >
             <filmlist film-type="nowPlaying" :list="filmList"/>
+
          </van-tab>
         <van-tab title="即将上映">
             <!-- <filmlist film-type="comingSoon" :list="filmList"/> -->
@@ -33,7 +34,7 @@ import {mapActions,mapState, mapMutations} from 'vuex'
 export default {
    data () {
         return {
-            active:1
+            active:1,
         }
     },
   components : {
@@ -42,10 +43,12 @@ export default {
 
   computed : {
       ...mapState('film',['filmList']),
+      ...mapState('film',['morefilmList']),
 
   },
    methods :{
      ...mapActions('film',['getFilmList']),
+     ...mapActions('film',['moregetFilmList']),
 
       //滚动事件  加载更多数据
 
@@ -59,16 +62,20 @@ export default {
         let clientHeight=document.documentElement.clientHeight;
         // console.log(scrollTop,scrollHeight,clientHeight)
         if((scrollHeight-clientHeight)-scrollTop<50) {
-            console.log('曹尼玛')
+            console.log('曹尼玛');
+
+
         }
       }
 
 
 
    },
+
+
    created (){
     this.getFilmList();
-
+    this.moregetFilmList();
     window.addEventListener('scroll',this.onScroll)
    }
 }
