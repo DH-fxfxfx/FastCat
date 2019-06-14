@@ -2,12 +2,20 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/store.js'
+
+import './styles/common/reset.less'
 import './styles/base.less'
-
-import { DropdownMenu, DropdownItem } from 'vant'
-
+import { Swipe, SwipeItem, Tab, Tabs, NavBar, IndexBar, IndexAnchor, Cell , DropdownMenu, DropdownItem } from 'vant'
 Vue
-  .use(DropdownMenu)
+  .use(Swipe)
+  .use(SwipeItem)
+  .use(Tab)
+  .use(Tabs)
+  .use(NavBar)
+  .use(IndexBar)
+  .use(IndexAnchor)
+  .use(Cell)
+ .use(DropdownMenu)
   .use(DropdownItem)
 
 Vue.config.productionTip = false
