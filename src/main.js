@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/store.js'
-
 import './styles/common/reset.less'
 import './styles/base.less'
 import { Swipe, SwipeItem, Tab, Tabs, NavBar, IndexBar, IndexAnchor, Cell , DropdownMenu, DropdownItem } from 'vant'
@@ -15,7 +14,7 @@ Vue
   .use(IndexBar)
   .use(IndexAnchor)
   .use(Cell)
-  .use(DropdownMenu)
+ .use(DropdownMenu)
   .use(DropdownItem)
 
 
