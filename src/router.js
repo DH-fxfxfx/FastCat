@@ -65,6 +65,10 @@ const router = new Router({
         // console.log(to)
         next()
       }
+
+      path: '/city',
+      component: () => import('./views/city/index1.vue')
+
     }
   ]
 })
