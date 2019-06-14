@@ -1,15 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import city from './city/index'
 import cinema from './cinema'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  modules: {
-    cinema
-
-import city from './city/index'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -20,6 +13,8 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    city
+    city,
+     cinema
+
   }
 })

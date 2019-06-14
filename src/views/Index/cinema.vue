@@ -81,7 +81,7 @@ export default {
 
 .city-entry {
   padding-left: 16px;
-  font-size: 16px;
+  font-size: 15px;
   color: #666;
   display: flex;
   align-items: center;
