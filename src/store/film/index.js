@@ -55,14 +55,10 @@ export default {
         });
 
           commit('MORESETFILMLIST',moreData)
-
-
-
-
         let newData= [...state.filmList,...state.morefilmList]
-        setTimeout(()=>{
+
           commit('SETFILMLIST',newData)
-        },0)
+
         console.log(newData);
       })
     }

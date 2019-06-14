@@ -20,6 +20,7 @@
                  v-for="ing  in 10"
                  :key="ing">
              </div>
+              <filmlist film-type="nowPlaying" :list="filmList"/>
         </van-tab>
         <van-tab  disabled=""></van-tab>
         </van-tabs>
@@ -31,6 +32,7 @@
 <script>
 import filmlist from '@/components/filmlist.vue'
 import {mapActions,mapState, mapMutations} from 'vuex'
+
 export default {
    data () {
         return {
@@ -62,8 +64,8 @@ export default {
         let clientHeight=document.documentElement.clientHeight;
         // console.log(scrollTop,scrollHeight,clientHeight)
         if((scrollHeight-clientHeight)-scrollTop<50) {
-            console.log('曹尼玛');
-
+            // console.log('曹尼玛');
+        // this.moregetFilmList();
 
         }
       }
@@ -75,7 +77,10 @@ export default {
 
    created (){
     this.getFilmList();
-    this.moregetFilmList();
+    setTimeout (()=>{
+        this.moregetFilmList();
+    })
+
     window.addEventListener('scroll',this.onScroll)
    }
 }
