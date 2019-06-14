@@ -1,6 +1,8 @@
 <template>
   <div class="page-city">
-    <van-nav-bar title="城市选择" left-text="返回" left-arrow/>
+    <span class="fanhui"> <router-link :to="{path: 'cinema'}">返回</router-link></span>
+
+   <span class="cityselect">城市选择</span>
     <div class="city-list">
       <div class="lv-indexlist">
         <ul class="lv-indexlist__content" id="lv-indexlist__content">
@@ -60,26 +62,30 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: "City",
+  name: 'City',
 
   computed: {
-    ...mapGetters("city", ["newCityList", "hotList", "indexlist"])
+    ...mapGetters('city', ['newCityList', 'hotList', 'indexlist'])
   },
 
   methods: {
-    ...mapActions("city", ["getCityList"])
+    ...mapActions('city', ['getCityList'])
   },
-
-  created() {
-    this.getCityList();
+  created () {
+    this.getCityList()
   }
-};
+}
 </script>
 <style lang="less">
 @import "~@/styles/common/mixins.less";
-
+.cityselect{
+  text-align: center;
+}
+.fanhui{
+  margin: 20px 0 0 20px;
+}
 .page-city {
   display: flex;
   flex-direction: column;

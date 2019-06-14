@@ -1,6 +1,7 @@
 // 城市相关的仓库数据
-import http from '@/utils/http'
+
 import { Toast } from 'vant'
+import axios from 'axios'
 export default {
   namespaced: true,
   state: {
@@ -44,17 +45,18 @@ export default {
   },
   actions: {
     getCityList ({ commit }) {
-      console.log(1)
+      // console.log(1)
       Toast.loading({
         duration: 0,
         message: '加载中。。。'
       })
-      http.get('/gateway?k=2943021', {
+      axios.get('https://m.maizuo.com/gateway?k=8614157', {
         headers: {
           'X-Client-Info': '{"a":"3000","ch":"1002","v":"5.0.4","e":"15598019575862630360538"}',
           'X-Host': 'mall.film-ticket.city.list'
         }
-      }).then(res => {
+      }).then(response => {
+        let res = response.data
         console.log(res.data.cities)
         console.log(1)
         commit('SETCITYLIST', res.data.cities)

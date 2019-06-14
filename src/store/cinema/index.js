@@ -16,7 +16,7 @@ export default {
 
   actions: {
     getCinemaList ({ commit, state }) {
-      axios.get('http://localhost:8080/ajax/cinemaList', {
+      axios.get('http://localhost:8080/maoyan/ajax/cinemaList', {
         params: {
           day: '2019-06-13',
           offset: 0,
