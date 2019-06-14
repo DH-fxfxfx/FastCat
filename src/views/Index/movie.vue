@@ -27,7 +27,6 @@
 
     </div>
 </template>
-
 <script>
 import filmlist from '@/components/filmlist.vue'
 import {mapActions,mapState, mapMutations} from 'vuex'

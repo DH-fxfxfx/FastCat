@@ -1,5 +1,5 @@
 <template>
-  <div class="abc">
+  <div class="abc top1">
     <router-view></router-view>
     <Tabbar :tabs="tabs" />
   </div>
@@ -26,6 +26,7 @@ export default {
 
 <style lang="less">
   @import '~@/styles/common/mixins.less';
+
   .abc{
     height: 100%;
   }
