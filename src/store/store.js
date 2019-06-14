@@ -4,7 +4,6 @@ import cinema from './cinema'
 import city from './city/index'
 import film from './film'
 Vue.use(Vuex)
-
 export default new Vuex.Store({
   state: {
 
