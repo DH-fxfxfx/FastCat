@@ -3,7 +3,7 @@
     <h1 class="nav-header">猫眼电影</h1>
     <div class="nav-tabs">
       <van-tabs v-model="active" sticky class="nav-tabs">
-        <router-link to="/cinema" class="nav-left">
+        <router-link to="/city" class="nav-left">
           <p class="nav-left-font">深圳</p>
           <span>▼</span>
         </router-link>
@@ -140,9 +140,6 @@ export default {
      window.addEventListener('scroll',this.onScroll);
   },
   mounted() {
-
-
-
   //   // console.log(this.$refs["mytabs"]);
   //   let scrollBox = this.$refs["mytabs"].$el.querySelector(
   //     ".van-tabs__content"

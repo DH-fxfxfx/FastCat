@@ -65,10 +65,10 @@ const router = new Router({
         // console.log(to)
         next()
       }
-
+    },
+    {
       path: '/city',
       component: () => import('./views/city/index1.vue')
-
     }
   ]
 })
@@ -108,7 +108,6 @@ router.afterEach((to, from) => {
   // console.log(from)
   setInterval(() => {
     NProgress.done()
-  }, 2000);
-
+  }, 2000)
 })
 export default router
